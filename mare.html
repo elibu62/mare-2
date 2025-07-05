@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salviamo il Mare!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f7fa;
+      color: #004d40;
+    }
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .quiz {
+      background: #b2dfdb;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Salviamo il Mare!</h1>
+    <p>Scopriamo insieme cos'è l'inquinamento marino e come possiamo fermarlo</p>
+  </header>
+
+  <nav>
+    <a href="#cosae">Cos'è</a>
+    <a href="#cause">Cause</a>
+    <a href="#gallery">Galleria</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="cosae">
+    <h2>Cos'è l'inquinamento del mare?</h2>
+    <p>L'inquinamento marino è causato da sostanze dannose come plastica, sostanze chimiche e scarichi che finiscono nei mari e negli oceani. Questi materiali danneggiano pesci, uccelli, tartarughe e tutto l'ecosistema marino.</p>
+  </section>
+
+  <section id="cause">
+    <h2>Quali sono le cause principali?</h2>
+    <ul>
+      <li>La plastica abbandonata (bottiglie, sacchetti, reti da pesca)</li>
+      <li>Gli scarichi industriali e agricoli</li>
+      <li>Il traffico marittimo e il petrolio disperso</li>
+      <li>La scarsa raccolta differenziata</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Galleria fotografica</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Plastic_pollution_in_the_ocean.jpg" alt="Plastica nel mare">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Marine_debris_plastic_bottles.jpg/800px-Marine_debris_plastic_bottles.jpg" alt="Rifiuti marini">
+    </div>
+  </section>
+
+  <section id="quiz">
+    <h2>Quiz: Quanto ne sai?</h2>
+    <div class="quiz">
+      <p><strong>Domanda:</strong> Qual è il rifiuto più comune nei mari?</p>
+      <button onclick="checkAnswer(true)">La plastica</button>
+      <button onclick="checkAnswer(false)">Il vetro</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Creato dalla Prof. [Tuo Nome] - © 2025</p>
+  </footer>
+
+  <script>
+    function checkAnswer(correct) {
+      const result = document.getElementById("result");
+      if (correct) {
+        result.textContent = "Bravissimo! Hai risposto correttamente! 🌊";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Ops! Riprova! La risposta corretta era: la plastica.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
